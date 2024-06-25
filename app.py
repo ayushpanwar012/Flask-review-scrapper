@@ -54,8 +54,8 @@ def resultPage():
                 mydict = {"Product Name": product_name, "Price": price, "Rating" : rating, "Comment Head": comment_heading, "Comment": comment, "Commented By": name}
                 reviews.append(mydict)
 
-            return render_template("result.html", reviews = reviews[0:(len(reviews)-1)]) 
-            # return json.dumps(reviews)    
+            # return render_template("result.html", reviews = reviews[0:(len(reviews)-1)]) 
+            return json.dumps(reviews)    
         except Exception as e:
             print(e)
 
